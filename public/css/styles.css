@@ -1,0 +1,149 @@
+/* Variables CSS para mantener la paleta coherente (Código DRY) */
+:root {
+    --bg-dark: #090014;
+    --text-light: #ffffff;
+    --purple-main: #4a1942;
+    --purple-neon: #8a2be2;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-main);
+}
+
+/* --- HEADER --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4%;
+    background: rgba(9, 0, 20, 0.9);
+    border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.logo-text span {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    color: #ccc;
+}
+
+.navbar a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--purple-neon);
+}
+
+/* Botones */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-purple {
+    border: 1px solid var(--purple-main);
+    background: transparent;
+    color: var(--text-light);
+}
+
+.btn-purple {
+    background: var(--purple-main);
+    color: var(--text-light);
+    border: none;
+}
+
+.btn-outline {
+    border: 1px solid #555;
+    background: transparent;
+    color: var(--text-light);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    /* El gradiente oscurece la parte izquierda para que el texto resalte */
+    background: linear-gradient(90deg, rgba(9,0,20,1) 0%, rgba(9,0,20,0.8) 45%, rgba(9,0,20,0) 100%), 
+                url('../assets/hero-bg.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+    padding-top: 80px; /* Compensa el header fijo */
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.hero-info {
+    display: flex;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.info-value {
+    font-weight: bold;
+    font-size: 0.9rem;
+}

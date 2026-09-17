@@ -18,10 +18,10 @@ window.tailwind.config = {
 };
 
 const roomData = {
-    Doctor: { title: 'Clínica Dr. Sienteesta', img: 'https://placehold.co/800x500/222/ddd?text=Dr.+Office+Interior', desc: 'Privacidad absoluta. Cortinas cerradas, tubo listo para examenes exhaustivos. Ambiente clínico con iluminación especial.' },
-    Cell: { title: 'La Celda de Contención', img: 'https://placehold.co/800x500/1a1a1a/aaa?text=Holding+Cell+Interior', desc: 'Cumple tu condena rodeado de lujo brutalista. Barras de acero auténticas y camas tipo litera modificadas para tu disfrute.' },
-    '50Shades': { title: '50 Sombras de Asier', img: 'https://placehold.co/800x500/3a0a0a/ff3333?text=Red+Room+Interior', desc: 'Totalmente equipada. Luces rojas tenues, cuero premium y accesorios para cuando quieres problemas sin el público.' },
-    Amelie: { title: 'Beso de Amelie', img: 'https://placehold.co/800x500/24152a/e83e8c?text=Beso+de+Amelie', desc: 'Una habitación íntima, elegante y llena de detalles inesperados.' },
+    Doctor: { title: 'Clínica Dr. Sienteesta', img: 'https://r2.fivemanage.com/IVyxB8OHfNEyQCVTvipC8/14.png', desc: 'Privacidad absoluta. Cortinas cerradas, tubo listo para examenes exhaustivos. Ambiente clínico con iluminación especial.' },
+    Cell: { title: 'La Celda de Contención', img: 'https://r2.fivemanage.com/IVyxB8OHfNEyQCVTvipC8/10.png', desc: 'Cumple tu condena rodeado de lujo brutalista. Barras de acero auténticas y camas tipo litera modificadas para tu disfrute.' },
+    '50Shades': { title: '50 Sombras de Asier', img: 'https://r2.fivemanage.com/IVyxB8OHfNEyQCVTvipC8/9.png', desc: 'Totalmente equipada. Luces rojas tenues, cuero premium y accesorios para cuando quieres problemas sin el público.' },
+    Amelie: { title: 'Beso de Amelie', img: 'https://r2.fivemanage.com/IVyxB8OHfNEyQCVTvipC8/13.png', desc: 'Una habitación íntima, elegante y llena de detalles inesperados.' },
 };
 
 function showMessage(text) {

@@ -4,6 +4,15 @@ body {
     overflow-x: hidden;
 }
 
+.hero-background {
+    width: 50%;
+    background-color: #0a0a0a;
+}
+
+.hero-background-fade {
+    background: linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.82) 18%, rgba(10, 10, 10, 0.2) 58%, rgba(10, 10, 10, 0) 100%);
+}
+
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; }
 ::-webkit-scrollbar-thumb { background: #4a2545; border-radius: 4px; }
@@ -13,6 +22,10 @@ body {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(20, 10, 20, 0.6));
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(232, 62, 140, 0.2);
+}
+
+.nav-glass img {
+    flex: 0 0 auto;
 }
 
 .text-glow { text-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
@@ -43,3 +56,8 @@ body {
 #contactForm input, #contactForm select, #contactForm textarea, #applicationForm input, #applicationForm select, #applicationForm textarea { width: 100%; background: #111827; border: 1px solid #1f2937; border-radius: 0.5rem; padding: 0.75rem 1rem; color: #fff; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
 #contactForm input:focus, #contactForm select:focus, #contactForm textarea:focus, #applicationForm input:focus, #applicationForm select:focus, #applicationForm textarea:focus { border-color: #ec4899; box-shadow: 0 0 0 1px #ec4899; }
 .modal-overlay { background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px); }
+
+@media (max-width: 768px) {
+    .hero-background { width: 100%; }
+    .hero-background-fade { background: linear-gradient(90deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.58) 55%, rgba(10, 10, 10, 0.18) 100%); }
+}

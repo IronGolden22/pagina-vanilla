@@ -1,0 +1,220 @@
+/* Variables de color basadas en Vanilla Unicorn */
+:root {
+    --bg-color: #0d0d12;
+    --bg-darker: #08080a;
+    --neon-pink: #ff2a85;
+    --neon-purple: #9d00ff;
+    --text-light: #f0f0f0;
+}
+
+/* Reset básico y scroll suave */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Tipografía destacada para títulos */
+h1, h2 {
+    font-family: 'Oleo Script', cursive;
+    letter-spacing: 2px;
+}
+
+span {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* Barra de Navegación */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(13, 13, 18, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav.scrolled {
+    padding: 10px 50px;
+    box-shadow: 0 5px 20px rgba(157, 0, 255, 0.2);
+}
+
+.logo {
+    font-family: 'Oleo Script', cursive;
+    font-size: 2rem;
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-purple);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 8px var(--neon-pink);
+}
+
+/* Botón Hamburguesa (Móviles) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--neon-pink);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Un degradado oscuro simulando el ambiente del club */
+    background: linear-gradient(rgba(8, 8, 10, 0.8), rgba(157, 0, 255, 0.3)), url('https://images.unsplash.com/photo-1566737236500-c8ac43014a67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-neon {
+    text-decoration: none;
+    color: var(--text-light);
+    border: 2px solid var(--neon-pink);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    box-shadow: 0 0 15px var(--neon-pink) inset, 0 0 15px var(--neon-pink);
+}
+
+.btn-neon:hover {
+    background-color: var(--neon-pink);
+    box-shadow: 0 0 30px var(--neon-pink) inset, 0 0 30px var(--neon-pink);
+}
+
+/* Secciones generales */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+/* Grid Productos */
+.grid-productos, .grid-resenas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card, .resena {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(157, 0, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover, .resena:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(157, 0, 255, 0.2);
+    border-color: var(--neon-purple);
+}
+
+.card h3 {
+    color: var(--neon-purple);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.resena h4 {
+    margin-top: 20px;
+    color: var(--neon-pink);
+}
+
+.resena p {
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #050505;
+    border-top: 1px solid #222;
+}
+
+/* Responsive básico para móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Se podría animar con JS después */
+    }
+    .hamburger {
+        display: flex;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
